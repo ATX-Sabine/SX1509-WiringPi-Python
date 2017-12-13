@@ -100,10 +100,20 @@ class SX1509(_object):
     __setattr__ = lambda self, name, value: _swig_setattr(self, SX1509, name, value)
     __swig_getmethods__ = {}
     __getattr__ = lambda self, name: _swig_getattr(self, SX1509, name)
-
-    def __init__(self, *args, **kwargs):
-        raise AttributeError("No constructor defined")
     __repr__ = _swig_repr
+
+    def __init__(self):
+        this = _SX1509.new_SX1509()
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+
+    def begin(self, address, resetPin):
+        return _SX1509.SX1509_begin(self, address, resetPin)
+
+    def reset(self, hardware):
+        return _SX1509.SX1509_reset(self, hardware)
     __swig_destroy__ = _SX1509.delete_SX1509
     __del__ = lambda self: None
 SX1509_swigregister = _SX1509.SX1509_swigregister

@@ -4,7 +4,8 @@
 %}
 
 class SX1509 {
-  SX1509();
-  byte begin(byte address, byte resetPin);
-  void reset(bool hardware);
+  public:
+    SX1509();
+    byte begin(byte address, byte resetPin);
+    void reset(bool hardware);
 };
