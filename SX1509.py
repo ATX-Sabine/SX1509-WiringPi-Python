@@ -114,6 +114,72 @@ class SX1509(_object):
 
     def reset(self, hardware):
         return _SX1509.SX1509_reset(self, hardware)
+
+    def pinDir(self, pin, inOut):
+        return _SX1509.SX1509_pinDir(self, pin, inOut)
+
+    def writePin(self, pin, highLow):
+        return _SX1509.SX1509_writePin(self, pin, highLow)
+
+    def readPin(self, pin):
+        return _SX1509.SX1509_readPin(self, pin)
+
+    def ledDriverInit(self, pin, freq, log):
+        return _SX1509.SX1509_ledDriverInit(self, pin, freq, log)
+
+    def pwm(self, pin, iOn):
+        return _SX1509.SX1509_pwm(self, pin, iOn)
+
+    def blink(self, pin, tOn, tOff, rise, fall, onInt, offInt, log):
+        return _SX1509.SX1509_blink(self, pin, tOn, tOff, rise, fall, onInt, offInt, log)
+
+    def setupBlink(self, pin, tOn, tOff, onIntensity, offIntensity, tRise, tFall, log):
+        return _SX1509.SX1509_setupBlink(self, pin, tOn, tOff, onIntensity, offIntensity, tRise, tFall, log)
+
+    def keypad(self, rows, columns, sleepTime, scanTime, debounceTime):
+        return _SX1509.SX1509_keypad(self, rows, columns, sleepTime, scanTime, debounceTime)
+
+    def readKeyData(self):
+        return _SX1509.SX1509_readKeyData(self)
+
+    def getRow(self, keyData):
+        return _SX1509.SX1509_getRow(self, keyData)
+
+    def getCol(self, keyData):
+        return _SX1509.SX1509_getCol(self, keyData)
+
+    def sync(self):
+        return _SX1509.SX1509_sync(self)
+
+    def debounceConfig(self, configValue):
+        return _SX1509.SX1509_debounceConfig(self, configValue)
+
+    def debounceTime(self, time):
+        return _SX1509.SX1509_debounceTime(self, time)
+
+    def debounceEnable(self, pin):
+        return _SX1509.SX1509_debounceEnable(self, pin)
+
+    def debouncePin(self, pin):
+        return _SX1509.SX1509_debouncePin(self, pin)
+
+    def debounceKeypad(self, time, numRows, numCols):
+        return _SX1509.SX1509_debounceKeypad(self, time, numRows, numCols)
+
+    def enableInterrupt(self, pin, riseFall):
+        return _SX1509.SX1509_enableInterrupt(self, pin, riseFall)
+
+    def interruptSource(self, clear):
+        return _SX1509.SX1509_interruptSource(self, clear)
+
+    def clearInterrupt(self):
+        return _SX1509.SX1509_clearInterrupt(self)
+
+    def checkInterrupt(self, pin):
+        return _SX1509.SX1509_checkInterrupt(self, pin)
+
+    def configClock(self, oscSource, oscPinFunction, oscFreqOut, oscDivider):
+        return _SX1509.SX1509_configClock(self, oscSource, oscPinFunction, oscFreqOut, oscDivider)
     __swig_destroy__ = _SX1509.delete_SX1509
     __del__ = lambda self: None
 SX1509_swigregister = _SX1509.SX1509_swigregister
