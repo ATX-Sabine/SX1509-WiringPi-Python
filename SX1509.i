@@ -1,6 +1,8 @@
 %module SX1509
 %{
   #include "./SparkFun-SX1509/SparkFunSX1509.h"
+  #include "WiringPi.h"
+  #include "WiringPiI2C.h"
 %}
 
 class SX1509 {

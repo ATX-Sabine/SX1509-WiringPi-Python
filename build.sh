@@ -1,2 +1,2 @@
-g++ -shared -o -O2 -fPIC -I/usr/include/python2.7 -I/usr/include/arm-linux-gnueabihf/python2.7 -I./SparkFun-SX1509/WiringPi-Python/ SparkFun-SX1509/SparkFunSX1509.cpp -o SX1509.so
-g++ -shared -o -O2 -fPIC -I/usr/include/python2.7 -I/usr/include/arm-linux-gnueabihf/python2.7  SX1509_wrap.cxx 
+g++ -shared -fPIC -I/usr/include/python2.7 -I/usr/include/arm-linux-gnueabihf/python2.7 -I/usr/local/include SparkFun-SX1509/SparkFunSX1509.cpp -o SX1509.o
+g++ -shared -fPIC -I/usr/include/python2.7 -I/usr/include/arm-linux-gnueabihf/python2.7 -I/usr/local/include SX1509_wrap.cxx -o SX1509_wrap.o
