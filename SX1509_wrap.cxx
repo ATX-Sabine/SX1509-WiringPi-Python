@@ -3733,6 +3733,96 @@ SWIGINTERN PyObject *_wrap_SX1509_blink(PyObject *SWIGUNUSEDPARM(self), PyObject
   byte arg2 ;
   unsigned long arg3 ;
   unsigned long arg4 ;
+  byte arg5 ;
+  byte arg6 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  void *argp2 ;
+  int res2 = 0 ;
+  unsigned long val3 ;
+  int ecode3 = 0 ;
+  unsigned long val4 ;
+  int ecode4 = 0 ;
+  void *argp5 ;
+  int res5 = 0 ;
+  void *argp6 ;
+  int res6 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  PyObject * obj2 = 0 ;
+  PyObject * obj3 = 0 ;
+  PyObject * obj4 = 0 ;
+  PyObject * obj5 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OOOOOO:SX1509_blink",&obj0,&obj1,&obj2,&obj3,&obj4,&obj5)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_SX1509, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SX1509_blink" "', argument " "1"" of type '" "SX1509 *""'"); 
+  }
+  arg1 = reinterpret_cast< SX1509 * >(argp1);
+  {
+    res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_byte,  0  | 0);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SX1509_blink" "', argument " "2"" of type '" "byte""'"); 
+    }  
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SX1509_blink" "', argument " "2"" of type '" "byte""'");
+    } else {
+      byte * temp = reinterpret_cast< byte * >(argp2);
+      arg2 = *temp;
+      if (SWIG_IsNewObj(res2)) delete temp;
+    }
+  }
+  ecode3 = SWIG_AsVal_unsigned_SS_long(obj2, &val3);
+  if (!SWIG_IsOK(ecode3)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "SX1509_blink" "', argument " "3"" of type '" "unsigned long""'");
+  } 
+  arg3 = static_cast< unsigned long >(val3);
+  ecode4 = SWIG_AsVal_unsigned_SS_long(obj3, &val4);
+  if (!SWIG_IsOK(ecode4)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "SX1509_blink" "', argument " "4"" of type '" "unsigned long""'");
+  } 
+  arg4 = static_cast< unsigned long >(val4);
+  {
+    res5 = SWIG_ConvertPtr(obj4, &argp5, SWIGTYPE_p_byte,  0  | 0);
+    if (!SWIG_IsOK(res5)) {
+      SWIG_exception_fail(SWIG_ArgError(res5), "in method '" "SX1509_blink" "', argument " "5"" of type '" "byte""'"); 
+    }  
+    if (!argp5) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SX1509_blink" "', argument " "5"" of type '" "byte""'");
+    } else {
+      byte * temp = reinterpret_cast< byte * >(argp5);
+      arg5 = *temp;
+      if (SWIG_IsNewObj(res5)) delete temp;
+    }
+  }
+  {
+    res6 = SWIG_ConvertPtr(obj5, &argp6, SWIGTYPE_p_byte,  0  | 0);
+    if (!SWIG_IsOK(res6)) {
+      SWIG_exception_fail(SWIG_ArgError(res6), "in method '" "SX1509_blink" "', argument " "6"" of type '" "byte""'"); 
+    }  
+    if (!argp6) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SX1509_blink" "', argument " "6"" of type '" "byte""'");
+    } else {
+      byte * temp = reinterpret_cast< byte * >(argp6);
+      arg6 = *temp;
+      if (SWIG_IsNewObj(res6)) delete temp;
+    }
+  }
+  (arg1)->blink(arg2,arg3,arg4,arg5,arg6);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_SX1509_breathe(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  SX1509 *arg1 = (SX1509 *) 0 ;
+  byte arg2 ;
+  unsigned long arg3 ;
+  unsigned long arg4 ;
   unsigned long arg5 ;
   unsigned long arg6 ;
   byte arg7 ;
@@ -3766,19 +3856,19 @@ SWIGINTERN PyObject *_wrap_SX1509_blink(PyObject *SWIGUNUSEDPARM(self), PyObject
   PyObject * obj7 = 0 ;
   PyObject * obj8 = 0 ;
   
-  if (!PyArg_ParseTuple(args,(char *)"OOOOOOOOO:SX1509_blink",&obj0,&obj1,&obj2,&obj3,&obj4,&obj5,&obj6,&obj7,&obj8)) SWIG_fail;
+  if (!PyArg_ParseTuple(args,(char *)"OOOOOOOOO:SX1509_breathe",&obj0,&obj1,&obj2,&obj3,&obj4,&obj5,&obj6,&obj7,&obj8)) SWIG_fail;
   res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_SX1509, 0 |  0 );
   if (!SWIG_IsOK(res1)) {
-    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SX1509_blink" "', argument " "1"" of type '" "SX1509 *""'"); 
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SX1509_breathe" "', argument " "1"" of type '" "SX1509 *""'"); 
   }
   arg1 = reinterpret_cast< SX1509 * >(argp1);
   {
     res2 = SWIG_ConvertPtr(obj1, &argp2, SWIGTYPE_p_byte,  0  | 0);
     if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SX1509_blink" "', argument " "2"" of type '" "byte""'"); 
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "SX1509_breathe" "', argument " "2"" of type '" "byte""'"); 
     }  
     if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SX1509_blink" "', argument " "2"" of type '" "byte""'");
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SX1509_breathe" "', argument " "2"" of type '" "byte""'");
     } else {
       byte * temp = reinterpret_cast< byte * >(argp2);
       arg2 = *temp;
@@ -3787,31 +3877,31 @@ SWIGINTERN PyObject *_wrap_SX1509_blink(PyObject *SWIGUNUSEDPARM(self), PyObject
   }
   ecode3 = SWIG_AsVal_unsigned_SS_long(obj2, &val3);
   if (!SWIG_IsOK(ecode3)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "SX1509_blink" "', argument " "3"" of type '" "unsigned long""'");
+    SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "SX1509_breathe" "', argument " "3"" of type '" "unsigned long""'");
   } 
   arg3 = static_cast< unsigned long >(val3);
   ecode4 = SWIG_AsVal_unsigned_SS_long(obj3, &val4);
   if (!SWIG_IsOK(ecode4)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "SX1509_blink" "', argument " "4"" of type '" "unsigned long""'");
+    SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "SX1509_breathe" "', argument " "4"" of type '" "unsigned long""'");
   } 
   arg4 = static_cast< unsigned long >(val4);
   ecode5 = SWIG_AsVal_unsigned_SS_long(obj4, &val5);
   if (!SWIG_IsOK(ecode5)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode5), "in method '" "SX1509_blink" "', argument " "5"" of type '" "unsigned long""'");
+    SWIG_exception_fail(SWIG_ArgError(ecode5), "in method '" "SX1509_breathe" "', argument " "5"" of type '" "unsigned long""'");
   } 
   arg5 = static_cast< unsigned long >(val5);
   ecode6 = SWIG_AsVal_unsigned_SS_long(obj5, &val6);
   if (!SWIG_IsOK(ecode6)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode6), "in method '" "SX1509_blink" "', argument " "6"" of type '" "unsigned long""'");
+    SWIG_exception_fail(SWIG_ArgError(ecode6), "in method '" "SX1509_breathe" "', argument " "6"" of type '" "unsigned long""'");
   } 
   arg6 = static_cast< unsigned long >(val6);
   {
     res7 = SWIG_ConvertPtr(obj6, &argp7, SWIGTYPE_p_byte,  0  | 0);
     if (!SWIG_IsOK(res7)) {
-      SWIG_exception_fail(SWIG_ArgError(res7), "in method '" "SX1509_blink" "', argument " "7"" of type '" "byte""'"); 
+      SWIG_exception_fail(SWIG_ArgError(res7), "in method '" "SX1509_breathe" "', argument " "7"" of type '" "byte""'"); 
     }  
     if (!argp7) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SX1509_blink" "', argument " "7"" of type '" "byte""'");
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SX1509_breathe" "', argument " "7"" of type '" "byte""'");
     } else {
       byte * temp = reinterpret_cast< byte * >(argp7);
       arg7 = *temp;
@@ -3821,10 +3911,10 @@ SWIGINTERN PyObject *_wrap_SX1509_blink(PyObject *SWIGUNUSEDPARM(self), PyObject
   {
     res8 = SWIG_ConvertPtr(obj7, &argp8, SWIGTYPE_p_byte,  0  | 0);
     if (!SWIG_IsOK(res8)) {
-      SWIG_exception_fail(SWIG_ArgError(res8), "in method '" "SX1509_blink" "', argument " "8"" of type '" "byte""'"); 
+      SWIG_exception_fail(SWIG_ArgError(res8), "in method '" "SX1509_breathe" "', argument " "8"" of type '" "byte""'"); 
     }  
     if (!argp8) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SX1509_blink" "', argument " "8"" of type '" "byte""'");
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "SX1509_breathe" "', argument " "8"" of type '" "byte""'");
     } else {
       byte * temp = reinterpret_cast< byte * >(argp8);
       arg8 = *temp;
@@ -3833,10 +3923,10 @@ SWIGINTERN PyObject *_wrap_SX1509_blink(PyObject *SWIGUNUSEDPARM(self), PyObject
   }
   ecode9 = SWIG_AsVal_bool(obj8, &val9);
   if (!SWIG_IsOK(ecode9)) {
-    SWIG_exception_fail(SWIG_ArgError(ecode9), "in method '" "SX1509_blink" "', argument " "9"" of type '" "bool""'");
+    SWIG_exception_fail(SWIG_ArgError(ecode9), "in method '" "SX1509_breathe" "', argument " "9"" of type '" "bool""'");
   } 
   arg9 = static_cast< bool >(val9);
-  (arg1)->blink(arg2,arg3,arg4,arg5,arg6,arg7,arg8,arg9);
+  (arg1)->breathe(arg2,arg3,arg4,arg5,arg6,arg7,arg8,arg9);
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -4686,6 +4776,7 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"SX1509_ledDriverInit", _wrap_SX1509_ledDriverInit, METH_VARARGS, NULL},
 	 { (char *)"SX1509_pwm", _wrap_SX1509_pwm, METH_VARARGS, NULL},
 	 { (char *)"SX1509_blink", _wrap_SX1509_blink, METH_VARARGS, NULL},
+	 { (char *)"SX1509_breathe", _wrap_SX1509_breathe, METH_VARARGS, NULL},
 	 { (char *)"SX1509_setupBlink", _wrap_SX1509_setupBlink, METH_VARARGS, NULL},
 	 { (char *)"SX1509_keypad", _wrap_SX1509_keypad, METH_VARARGS, NULL},
 	 { (char *)"SX1509_readKeyData", _wrap_SX1509_readKeyData, METH_VARARGS, NULL},

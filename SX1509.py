@@ -130,8 +130,11 @@ class SX1509(_object):
     def pwm(self, pin, iOn):
         return _SX1509.SX1509_pwm(self, pin, iOn)
 
-    def blink(self, pin, tOn, tOff, rise, fall, onInt, offInt, log):
-        return _SX1509.SX1509_blink(self, pin, tOn, tOff, rise, fall, onInt, offInt, log)
+    def blink(self, pin, tOn, tOff, onIntensity, offIntensity):
+        return _SX1509.SX1509_blink(self, pin, tOn, tOff, onIntensity, offIntensity)
+
+    def breathe(self, pin, tOn, tOff, rise, fall, onInt, offInt, log):
+        return _SX1509.SX1509_breathe(self, pin, tOn, tOff, rise, fall, onInt, offInt, log)
 
     def setupBlink(self, pin, tOn, tOff, onIntensity, offIntensity, tRise, tFall, log):
         return _SX1509.SX1509_setupBlink(self, pin, tOn, tOff, onIntensity, offIntensity, tRise, tFall, log)

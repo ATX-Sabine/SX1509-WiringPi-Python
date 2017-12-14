@@ -13,7 +13,8 @@ class SX1509 {
     byte readPin(byte pin);
     void ledDriverInit(byte pin, byte freq, bool log);
     void pwm(byte pin, byte iOn);
-    void blink(byte pin, unsigned long tOn, unsigned long tOff, unsigned long rise, unsigned long fall, byte onInt, byte offInt, bool log);
+    void blink(byte pin, unsigned long tOn, unsigned long tOff, byte onIntensity, byte offIntensity);
+    void breathe(byte pin, unsigned long tOn, unsigned long tOff, unsigned long rise, unsigned long fall, byte onInt, byte offInt, bool log);
     void setupBlink(byte pin, byte tOn, byte tOff, byte onIntensity, byte offIntensity, byte tRise, byte tFall, bool log);
     void keypad(byte rows, byte columns, unsigned int sleepTime, byte scanTime, byte debounceTime);
     unsigned int readKeyData();

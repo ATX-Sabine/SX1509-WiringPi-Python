@@ -1,0 +1,2 @@
+g++ -O2 -fPIC -c SparkFun-SX1509/SparkFunSX1509.cpp -I/System/Library/Frameworks/Python.framework/Versions/2.7/include/python2.7 -I/System/Library/Frameworks/Python.framework/Versions/2.7/include/python2.7 -o SX1509.so &&
+g++ -O2 -fPIC -c SX1509_wrap.cxx -I/System/Library/Frameworks/Python.framework/Versions/2.7/include/python2.7 -I/System/Library/Frameworks/Python.framework/Versions/2.7/include/python2.7
