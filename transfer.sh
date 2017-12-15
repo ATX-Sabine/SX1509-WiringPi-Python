@@ -1,0 +1,1 @@
+rsync -a -v ./ ATX_Sabine@golden-raider-mk2.local:~/SX1509

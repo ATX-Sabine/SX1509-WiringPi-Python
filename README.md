@@ -8,3 +8,6 @@ Installation
 * Make sure python-dev is installed
 * copy this over to the pi
 * run the build script
+
+Notes 
+http://intermediate-and-advanced-software-carpentry.readthedocs.io/en/latest/c++-wrapping.html
