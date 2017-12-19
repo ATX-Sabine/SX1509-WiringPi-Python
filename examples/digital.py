@@ -1,5 +1,3 @@
-import sys
-sys.path.insert(0, '../')
 from SX1509 import SX1509
 
 sx1509 = SX1509()
