@@ -30,3 +30,13 @@ Translation of the SX1509 driver for WiringPi, with some naming changes
   * digital read of pin, returns SX1509.HIGH or SX1509.LOW
 * .PWMWrite(pin, value)
   * PWM write to pin of value, errors if pin mode is not SX1509.PWM
+
+
+### Utils (not necessairily needed for use, called by API methods)
+
+* .startClock(internal=True)
+  * starts the clock oscillations for PWM use
+* .pullupResistor(pin, enable=False)
+  * sets the pullup resistor value for pin
+* .inputBuffer(pin, enable=False)
+  * sets the input buffer for pin
