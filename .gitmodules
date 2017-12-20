@@ -1,6 +1,0 @@
-[submodule "SparkFun-SX1509"]
-	path = SparkFun-SX1509
-	url = git@github.com:ATX-Sabine/SparkFun-SX1509.git
-[submodule "SX1509-WiringPi-Python"]
-	path = SX1509-WiringPi-Python
-	url = git@github.com:ATX-Sabine/SX1509-WiringPi-Python.git
