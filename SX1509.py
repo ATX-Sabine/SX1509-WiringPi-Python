@@ -1,7 +1,10 @@
+import wiringpi
+
 class SX1509:
 
   REGISTERS = {
-    'CHECK': 0x13
+    'CHECK': 0x13,
+    'RESET': 0x7D
   }
 
   PIN_MODE = {
@@ -20,4 +23,21 @@ class SX1509:
     self.interruptPin = interruptPin
     self.resetPin = resetPin
     self.oscillatorPin = oscillatorPin
+    wiringpi.wiringPiSetupSys()
+    wiringpi.wiringPiI2CSetup(self.address)
+    data = wiringPiI2C(self.REGISTERS['CHECK'])
+    print(data)
+
+  def reset(bool hardware):
+    if hardware:
+      if self.resetPin == None:
+        raise PinError('SX1509 cannot hardware reset when .resetPin is None')
+      else:
+        wiringpi.pinMode(self.resetPin, 1)
+        wiringpi.digitalWrite(self.resetPin, 0)
+        wiringpi.digitalWrite(self.resetPin, 1)
+    else:
+      wiringpi.wiringPiI2CWriteReg8(self.REGISTERS['RESET'], 0x12)
+      wiringpi.wiringPiI2CWriteReg8(self.REGISTERS['RESET'], 0x34)
+
   
