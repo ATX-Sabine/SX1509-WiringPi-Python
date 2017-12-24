@@ -11,7 +11,7 @@ Translation of the SX1509 driver for WiringPi, with some naming changes
 
 ### Constants
 
-* Pin Direction
+* Pin Mode
   * SX1509.PIN_MODE['OUTPUT'], SX1509.PIN_MODE['INPUT'], SX1509.PIN_MODE['PWM']
 * Digital values
   * SX1509.PIN_STATE['HIGH'], SX1509.PIN_STATE['LOW']
