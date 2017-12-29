@@ -38,7 +38,8 @@ class SX1509:
     data[0] = self.i2c.readReg8(self.device, self.REGISTERS['CHECK'])
     data[1] = self.i2c.readReg8(self.device, self.REGISTERS['CHECK']+1)
     if data[0] != 0xFF or data[1] != 0x00:
-      raise new Error('SX1509 not detected!')
+      raise Error('SX1509 not detected!')
+    self.reset(False)
 
   def reset(self, hardware):
     if hardware:
