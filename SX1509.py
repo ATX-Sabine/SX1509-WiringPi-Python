@@ -112,6 +112,15 @@ class SX1509:
     self.i2c.writeReg8(self.device, self.REGISTERS['LED_DRIVER'], ledDriverState[0])
     self.i2c.writeReg8(self.device, self.REGISTERS['LED_DRIVER'] + 1, ledDriverState[1])
 
+  def enablePWMPin(self, pin):
+    self.startInternalClock()
+    self.disableInputBuffer(pin, True)
+    self.setPullupResistor(pin, False)
+    self.setPullupResistor(pin, 'output')
+    self.setDigitalPinValue(pin, 0)
+    self.startInternalClock()
+    self.enableLEDDriver(pin, True)
+
   def setPWMPinValue(self, pin, value):
     # byteValue = 0xFF & value
     self.i2c.writeReg8(self.device, self.REGISTERS['PWM_INTENSITY'][pin - 1], value)
