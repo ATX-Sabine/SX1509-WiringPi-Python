@@ -37,7 +37,6 @@ class SX1509:
     data = [0x00, 0x00]
     data[0] = self.i2c.readReg8(self.device, self.REGISTERS['CHECK'])
     data[1] = self.i2c.readReg8(self.device, self.REGISTERS['CHECK']+1)
-    print(data) 
 
   def reset(self, hardware):
     if hardware:
