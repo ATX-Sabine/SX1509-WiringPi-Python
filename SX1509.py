@@ -117,7 +117,7 @@ class SX1509:
   def enablePWMPin(self, pin):
     self.startInternalClock()
     self.disableInputBuffer(pin, True)
-    self.setPullupResistor(pin, False)
+    self.setPullupResistor(pin, True)
     self.setPullupResistor(pin, 'output')
     self.setDigitalPinValue(pin, 0)
     self.startInternalClock()
