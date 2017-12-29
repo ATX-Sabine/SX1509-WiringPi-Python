@@ -118,7 +118,7 @@ class SX1509:
     self.startInternalClock()
     self.setDisableInputBuffer(pin, True)
     self.setPullupResistor(pin, True)
-    self.setPullupResistor(pin, 'output')
+    self.setPinDirection(pin, 'output')
     self.setDigitalPinValue(pin, 0)
     self.startInternalClock()
     self.enableLEDDriver(pin, True)
