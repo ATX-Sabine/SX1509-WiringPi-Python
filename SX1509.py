@@ -89,7 +89,7 @@ class SX1509:
     currentPinState[0] = self.i2c.readReg8(self.device, self.REGISTERS['PIN_DIRECTION'])
     currentPinState[1] = self.i2c.readReg8(self.device, self.REGISTERS['PIN_DIRECTION'] + 1)
     bitOn = True
-    if direction == 'output':
+    if direction == self.PIN_MODE['OUTPUT']:
       bitOn = False
     newPinState = self.useBitMask(currentPinState, pin, bitOn)
     self.i2c.writeReg8(self.device, self.REGISTERS['PIN_DIRECTION'], newPinState[0])
@@ -118,7 +118,7 @@ class SX1509:
     self.startInternalClock()
     self.setDisableInputBuffer(pin, True)
     self.setPullupResistor(pin, True)
-    self.setPinDirection(pin, 'output')
+    self.setPinDirection(pin, self.PIN_MODE['OUTPUT'])
     self.setDigitalPinValue(pin, 0)
     self.startInternalClock()
     self.enableLEDDriver(pin, True)
