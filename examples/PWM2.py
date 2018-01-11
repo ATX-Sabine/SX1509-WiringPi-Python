@@ -10,23 +10,7 @@ from SX1509 import SX1509
 
 expander = SX1509(0x3E)
 expander.reset(False)
-expander.startInternalClock()
-expander.setDisableInputBuffer(5, True)
-expander.setDisableInputBuffer(6, True)
-expander.setDisableInputBuffer(7, True)
-expander.setPullupResistor(5, True)
-expander.setPullupResistor(6, True)
-expander.setPullupResistor(7, True)
-expander.setPinDirection(5, expander.PIN_MODE['OUTPUT'])
-expander.setPinDirection(6, expander.PIN_MODE['OUTPUT'])
-expander.setPinDirection(7, expander.PIN_MODE['OUTPUT'])
-expander.setDigitalPinValue(5, 0)
-expander.setDigitalPinValue(6, 0)
-expander.setDigitalPinValue(7, 0)
-expander.startInternalClock()
-expander.enableLEDDriver(5, True)
-expander.enableLEDDriver(6, True)
-expander.enableLEDDriver(7, True)
+expander.enablePWMPins([4, 5, 6])
 
 hue = 0
 
@@ -53,11 +37,10 @@ def hsv2rgb(h, s, v):
 
 while True:
   color = hsv2rgb(hue, 1, 1)
-  print(color)
   expander.setPWMPinValue(5, color[0])
   expander.setPWMPinValue(6, color[1])
-  expander.setPWMPinValue(7, color[2])
-  hue += 3
+  expander.setPWMPinValue(4, color[2])
+  hue += 1
   if hue > 360:
     hue = 0
   time.sleep(.1)

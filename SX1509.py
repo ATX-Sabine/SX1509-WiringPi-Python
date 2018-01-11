@@ -139,7 +139,7 @@ class SX1509:
 
   def setPWMPinValue(self, pin, value):
     # byteValue = 0xFF & value
-    self.i2c.writeReg8(self.device, self.REGISTERS['PWM_INTENSITY'][pin - 1], value)
+    self.i2c.writeReg8(self.device, self.REGISTERS['PWM_INTENSITY'][pin], value)
 
   def useBitMask(self, currentState, bit, bitOn):
     mask = [0x00, 0x00]
