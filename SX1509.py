@@ -123,6 +123,20 @@ class SX1509:
     self.startInternalClock()
     self.enableLEDDriver(pin, True)
 
+  def enablePWMPins(self, pins):
+    self.startInternalClock()
+    for pin in pins: 
+      self.setDisableInputBuffer(pin, True)
+    for pin in pins: 
+      self.setPullupResistor(pin, True)
+    for pin in pins:
+      self.setPinDirection(pin, self.PIN_MODE['OUTPUT'])
+    for pin in pins: 
+      self.setDigitalPinValue(pin, 0)
+    self.startInternalClock()
+    for pin in pins:
+      self.enableLEDDriver(pin, True)
+
   def setPWMPinValue(self, pin, value):
     # byteValue = 0xFF & value
     self.i2c.writeReg8(self.device, self.REGISTERS['PWM_INTENSITY'][pin - 1], value)
